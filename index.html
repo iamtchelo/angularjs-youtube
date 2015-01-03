@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Youtube" ng-controller="YoutubeController">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ query }} - AngularJS Youtube</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+  <header id="header">
+      <div class="center">
+          <h1 class="logo">AngularJS Youtube</h1>
+          <form role="form">
+              <div class="input-group">
+                  <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                  <input type="text" class="input-search" placeholder="Type your Youtube's username" ng-model="query">
+              </div>
+          </form>
+      </div>
+  </header>
+
+   <div id="app">
+       <div class="row">
+           <div class="col-md-3 videos" ng-repeat="video in videos">
+              <img src="{{ video.images.cover.src }}" title="{{ video.title }}" alt="{{ video.title }}" class="videos-img">
+              <span class="glyphicon glyphicon-play play"></span>
+              <div class="videos-section">
+                  <h1 class="videos-title"><a href="{{ video.link }}" target="_blank">{{ video.title }}</a></h1>
+                  <div class="section-bottom">
+                      <span class="category"><span class="glyphicon glyphicon-pencil"></span> {{ video.category }}</span>
+                      <span class="views"><span class="glyphicon glyphicon-eye-open"></span> {{ video.viewCount }}</span>
+                  </div>
+              </div>
+           </div>
+       </div>
+   </div>
+    
+    <footer id="footer">
+    </footer>
+    <script src="assets/scripts/angular.js"></script>
+    <script src="assets/scripts/youtube.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
