@@ -40,7 +40,7 @@ body,html {
 #app {
     margin: 50px auto;
     padding: 20px;
-    width: 90%;
+    width: 900px;
 }
 
 .input-group {
@@ -58,14 +58,29 @@ body,html {
 
     -webkit-border-top-left-radius: 4px;
     -webkit-border-bottom-left-radius: 4px;
+    -moz-border-top-left-radius: 4px;
+    -moz-border-bottom-left-radius: 4px;
+    -ms-border-top-left-radius: 4px;
+    -ms-border-bottom-left-radius: 4px;
+    -o-border-top-left-radius: 4px;
+    -o-border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .videos {
     position: relative;
     float: left;
-    padding: 0;
     margin: 20px;
-    width: 29.7%;
+    width: 270px;
+}
+
+.videos:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.videos:nth-child(3n+3) {
+    margin-right: 0;
 }
 
 .videos:hover .videos-section {
@@ -84,10 +99,10 @@ body,html {
     left: 0;
     right: 0;
     margin: auto;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     color: #FFF;
-    font-size: 60px;
+    font-size: 30px;
 }
 
 .videos-section {
@@ -110,7 +125,7 @@ body,html {
 
 .section-bottom span {
     color: #FFF;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .section-bottom .category {
@@ -119,11 +134,11 @@ body,html {
 
 .videos-section .videos-title {
     display: block;
-    width: 80%;
-    margin: 100px auto;
+    width: 85%;
+    margin: 40px auto;
     color: #FFF;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 18px;
 }
 
 
