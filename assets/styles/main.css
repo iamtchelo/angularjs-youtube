@@ -20,21 +20,25 @@ body,html {
 }
 
 #header {
-    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
     width: 100%;
-    padding: 15px 0;
-    background: #DF2826;
+    padding: 10px 0;
+    background: #FFF;
+    border-bottom: 1px solid #CCC;
 }
 
 #header .logo {
     float: left;
-    margin: 4px 0 0 0;
+    margin: 0;
     font-size: 1.5em;
     color: #FFF;
 }
 
 #app {
-    margin: auto;
+    margin: 50px auto;
     padding: 20px;
     width: 90%;
 }
@@ -46,13 +50,14 @@ body,html {
 
 .input-search {
     width: 100%;
-    padding: 10px;
+    padding: 5px 10px;
     border: none;
     outline: none;
     color: #333;
+    border: 1px solid #CCC;
 
-    -webkit-border-top-right-radius: 4px;
-    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
 }
 
 .videos {
