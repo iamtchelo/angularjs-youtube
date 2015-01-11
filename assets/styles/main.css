@@ -37,6 +37,13 @@ body,html {
     color: #FFF;
 }
 
+#header .subtitle {
+    float: left;
+    margin: 4px 20px;
+    font-size: 20px;
+    color: #666;
+}
+
 #app {
     margin: 50px auto;
     padding: 20px;
