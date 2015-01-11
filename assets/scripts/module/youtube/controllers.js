@@ -10,7 +10,7 @@
 	function YoutubeController($scope, $http, YoutubeService) {
 
 		// default channel
-		$scope.query = 'ccvideira';
+		$scope.query = 'googledevelopers';
 
 		$scope.$watch('query', function(data) {
 			YoutubeService.getUserVideos(data)
