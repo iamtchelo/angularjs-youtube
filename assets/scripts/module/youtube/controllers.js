@@ -16,6 +16,7 @@
 			YoutubeService.getUserVideos(data)
 			.success(function(data) {
           parseData(data);
+          console.log($scope.videos);
 
 			}).error(function(error) {
 				console.log('Error:', error);
@@ -28,6 +29,7 @@
 
             data.feed.entry.forEach(function(element, index) {
                 var video = {
+                     id: getVideoId(element.link[0].href),
                      title: element.title.$t,
                      link: element.link[0].href,
                      viewCount: element.yt$statistics.viewCount,
@@ -50,6 +52,29 @@
             });
         }
     }
+
+    // Get all query params
+    function queryString(url) {
+        var parse_url = /^(?:([a-zA-Z]+):)?(\/{0,3})([0-9.\-a-zA-Z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/,
+            names = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'],
+            query_string = {},
+            result = parse_url.exec(url);
+
+        var vars = result[6].split('&');
+
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            query_string[pair[0]] = pair[1];
+        }
+
+        return query_string;
+    }
+
+    function getVideoId(url) {
+        var query_string = queryString(url);
+        return query_string.v;
+    }
+
   }
 	
 })();
