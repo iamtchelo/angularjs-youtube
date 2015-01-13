@@ -5,9 +5,9 @@
 	.controller('YoutubeController', YoutubeController);
 
 	// Inject DI
-	YoutubeController.$inject = ['$scope', '$http', 'YoutubeService'];
+	YoutubeController.$inject = ['$scope', '$http', '$sce', 'YoutubeService'];
 
-	function YoutubeController($scope, $http, YoutubeService) {
+	function YoutubeController($scope, $http, $sce, YoutubeService) {
 
 		// default channel
 		$scope.query = 'googledevelopers';
@@ -22,6 +22,29 @@
 				console.log('Error:', error);
 			});
 		});
+
+    $scope.modal = false;
+    $scope.currentVideo = null;
+
+    $scope.videoModal = function(id) {
+        if (!id) {
+            $scope.modal = false;
+            return;
+        }
+
+        var video = 'http://www.youtube.com/embed/' + id;
+        $scope.currentVideo = $sce.trustAsResourceUrl(video);
+        $scope.modal = true;
+    };
+
+    $scope.closeModal = function() {
+        if ($scope.modal === false) {
+            return;
+        }
+
+        $scope.modal = false;
+        $scope.currentVideo = null;
+    };
 
     function parseData(data) {
         if (data.feed.entry.length > 0) {

@@ -19,21 +19,31 @@
           </form>
       </div>
   </header>
-
+  
    <div id="app">
        <div class="row">
            <div class="videos" ng-repeat="video in videos">
-              <img src="{{ video.images.cover.src }}" title="{{ video.title }}" alt="{{ video.title }}" class="videos-img">
-              <span class="glyphicon glyphicon-play play"></span>
-              <div class="videos-section">
-                  <h1 class="videos-title"><a href="{{ video.link }}" target="_blank">{{ video.title }}</a></h1>
-                  <div class="section-bottom">
-                      <span class="category"><span class="glyphicon glyphicon-pencil"></span> {{ video.category }}</span>
-                      <span class="views"><span class="glyphicon glyphicon-eye-open"></span> {{ video.viewCount }}</span>
-                  </div>
-              </div>
+              <a href="#" ng-click="videoModal(video.id)">
+                <img src="{{ video.images.cover.src }}" title="{{ video.title }}" alt="{{ video.title }}" class="videos-img">
+                <span class="glyphicon glyphicon-play play"></span>
+                <div class="videos-section">
+                    <h1 class="videos-title">{{ video.title }}</h1>
+                    <div class="section-bottom">
+                        <span class="category"><span class="glyphicon glyphicon-pencil"></span> {{ video.category }}</span>
+                        <span class="views"><span class="glyphicon glyphicon-eye-open"></span> {{ video.viewCount }}</span>
+                    </div>
+                </div>
+              </a>
            </div>
        </div>
+   </div>
+
+   <!-- Modal -->
+   <div id="modal" ng-click="closeModal()" ng-class="{'modal-active': modal}">
+      <div class="modal-content">
+          <iframe width="560" height="315" ng-if="modal" ng-src="{{ currentVideo }}" frameborder="0" allowfullscreen></iframe>
+          <a href="#" ng-click="closeModal()" class="close-modal">&#215;</a>
+      </div>
    </div>
     
     <footer id="footer">
