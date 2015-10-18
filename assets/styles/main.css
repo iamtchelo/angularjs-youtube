@@ -3,9 +3,9 @@
     padding: 0;
 }
 
-a, a:hover { 
-    text-decoration: none; 
-    color: #FFF; 
+a, a:hover {
+    text-decoration: none;
+    color: #FFF;
 }
 
 body,html {
@@ -77,9 +77,11 @@ body,html {
 
 .videos {
     position: relative;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     margin: 20px;
     width: 270px;
+    background: #FFF;
 }
 
 .videos:nth-child(3n+1) {
@@ -92,6 +94,20 @@ body,html {
 
 .videos:hover .videos-section {
     display: block;
+}
+
+.videos .title {
+  margin: 5px 0;
+  padding: 10px;
+  color: #E12A27;
+  font-weight: normal;
+}
+
+.videos .video-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
 }
 
 .videos .videos-img {
@@ -184,32 +200,3 @@ body,html {
     right: 0;
     font-size: 35px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
