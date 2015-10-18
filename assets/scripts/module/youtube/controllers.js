@@ -37,7 +37,7 @@
           return;
       }
 
-      var video = 'http://www.youtube.com/embed/' + id;
+      var video = 'http://www.youtube.com/embed/' + id + '?autoplay=1';
       $scope.currentVideo = $sce.trustAsResourceUrl(video);
       $scope.modal = true;
     };
