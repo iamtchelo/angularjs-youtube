@@ -7,7 +7,8 @@
 		params: {
 			key: 'AIzaSyBi6WSVs3D7_93pZQxXAMYmSRPZcAncX6I',
 			maxResults: 20,
-			part: 'snippet'
+			part: 'snippet',
+			type: 'video'
 		}
 	};
 
@@ -33,22 +34,7 @@
 				url += parseParams(API.params);
 
 				return $http.get(url);
-			},
-
-    	getUserVideos: function(query) {
-    		var url = YoutubeAPI.userUploads.replace(/(\{username\})/g, query);
-    		return $http.get(url + YoutubeAPI.defaultParams);
-    	},
-
-    	getVideo: function(id) {
-    		var url = YoutubeAPI.singleVideo.replace(/(\{videoid\})/g, id);
-    		return $http.get(url);
-    	},
-
-    	getVideos: function(query) {
-    		var url = YoutubeAPI.videos.replace(/(\{keyword\})/g, query);
-    		return $http.get(url);
-    	}
+			}
     };
 	}
 
