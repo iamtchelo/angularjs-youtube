@@ -23,7 +23,7 @@
        <div class="row">
            <div class="videos" ng-repeat="video in videos">
               <a href="#" ng-click="videoModal(video.id)">
-                <h4 class="title">{{ video.title }}</h4>
+                <span class="title">{{ video.title }}</span>
                 <div class="video-container">
                   <img src="{{ video.images.medium.url }}" title="{{ video.title }}" alt="{{ video.title }}" class="videos-img">
                   <span class="glyphicon glyphicon-play play"></span>
