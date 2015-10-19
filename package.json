@@ -1,0 +1,29 @@
+{
+  "name": "angularjs-youtube",
+  "version": "1.0.0",
+  "description": "A app to show your favorite videos with angularjs and youtube api v3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelodeveloper/angularjs-youtube.git"
+  },
+  "keywords": [
+    "youtube",
+    "videos",
+    "js",
+    "javascript",
+    "angularjs",
+    "app",
+    "api",
+    "mean"
+  ],
+  "author": "Marcelo Silva <marcelosilva.developer@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/marcelodeveloper/angularjs-youtube/issues"
+  },
+  "homepage": "https://github.com/marcelodeveloper/angularjs-youtube#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-ruby-sass": "^2.0.4"
+  }
+}

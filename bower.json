@@ -1,0 +1,23 @@
+{
+  "name": "angularjs-youtube",
+  "version": "1.0.0",
+  "homepage": "https://github.com/marcelodeveloper/angularjs-youtube",
+  "authors": [
+    "Marcelo Silva <marcelosilva.developer@gmail.com>"
+  ],
+  "description": "A app to show your favorite videos with angularjs and youtube api v3",
+  "keywords": [
+    "youtube",
+    "videos",
+    "js",
+    "javascript",
+    "angularjs",
+    "app",
+    "api",
+    "mean"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize-scss": "~3.0.3"
+  }
+}
