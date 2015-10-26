@@ -3,7 +3,7 @@ var jade = require('gulp-jade');
 var sass = require('gulp-ruby-sass');
 
 gulp.task('sass', function() {
-  return sass('./src/assets/scss/style.scss', {
+  return sass('./src/assets/scss/app.scss', {
     style: 'compressed',
     compass: true
   })
