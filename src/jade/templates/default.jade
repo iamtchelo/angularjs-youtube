@@ -1,11 +1,12 @@
 doctype html
-html(lang="pt-BR", ng-app="App")
+html(lang="pt-BR", ng-app="App", ng-controller="YoutubeController")
   head
     meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
     title {{ query }} - AngularJS Youtube
-    link(rel="stylesheet", src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
-    link(rel="stylesheet", src="/assets/css/app.css")
-  body(ng-controller="YoutubeController")
+    link(rel="stylesheet", href="/assets/css/app.css")
+  body
     header#header
       .center
         h1.logo
@@ -15,7 +16,7 @@ html(lang="pt-BR", ng-app="App")
         form(role="form", ng-submit="search()")
           .input-group
             input.input-search(type="text", placeholder="Search by a keyword", ng-model="query")
-            .input-group-add: span.glyphicon.glyphicon-search
+            .input-group-addon: span.glyphicon.glyphicon-search
     #app
       block content
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")

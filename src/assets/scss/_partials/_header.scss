@@ -1,0 +1,24 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 10px 0;
+  background: #FFF;
+  border-bottom: 1px solid $gray;
+
+  .logo {
+    float: left;
+    margin: 0;
+    font-size: 1.5em;
+    color: #FFF;
+  }
+
+  .subtitle {
+    float: left;
+    margin: 4px 20px;
+    font-size: 20px;
+    color: darken($gray, 40%);
+  }
+}

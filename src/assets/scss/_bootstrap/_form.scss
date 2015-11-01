@@ -1,0 +1,17 @@
+.input-group {
+  width: 400px;
+  float: right;
+}
+
+.input-search {
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  color: darken($gray, 30%);
+  font-size: 14px;
+  border: 1px solid $gray;
+
+  @include border-top-left-radius(4px);
+  @include border-bottom-left-radius(4px);
+}
