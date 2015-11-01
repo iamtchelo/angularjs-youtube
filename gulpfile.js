@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
 
 gulp.task('sass', function() {
@@ -19,9 +21,17 @@ gulp.task('template', function() {
     .pipe(gulp.dest('./public/'))
 });
 
+gulp.task('scripts', function() {
+  return gulp.src('./src/assets/js/**/*.js')
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/assets/js'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('./src/assets/scss/**/*', ['sass']);
+  gulp.watch('./src/assets/js/**/*', ['scripts'])
   gulp.watch('./src/jade/public/**/*', ['template']);
 });
 
-gulp.task('default', ['sass', 'template']);
+gulp.task('default', ['sass', 'scripts', 'template']);
