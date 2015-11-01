@@ -4,6 +4,8 @@ body,html {
   background: lighten($gray, 10%);
 }
 
+a:hover, a:visited { text-decoration: none; }
+
 #app {
   margin: 50px auto;
   padding: 20px;

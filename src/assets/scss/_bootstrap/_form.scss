@@ -9,7 +9,7 @@
   border: none;
   outline: none;
   color: darken($gray, 30%);
-  font-size: 14px;
+  font-size: 1em;
   border: 1px solid $gray;
 
   @include border-top-left-radius(4px);
