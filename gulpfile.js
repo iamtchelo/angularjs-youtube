@@ -16,7 +16,7 @@ gulp.task('sass', function() {
 gulp.task('template', function() {
   return gulp.src('./src/jade/public/**/*.jade')
     .pipe(jade({
-      pretty: true
+      pretty: false
     }))
     .pipe(gulp.dest('./public/'))
 });
