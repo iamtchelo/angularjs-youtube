@@ -6,11 +6,15 @@
 
 # How to start?
 
-> npm install -g gulp && npm install -g bower
+```sh
+$ npm install -g gulp && npm install -g bower
+```
 
 # Install dependencies
 
-> npm install && bower install
+```sh
+$ npm install && bower install
+```
 
 See the result on the browser, do enter in /public directory and run a simple server in *Python*
 
