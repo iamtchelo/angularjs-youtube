@@ -1,12 +1,12 @@
 (function() {
   'use strict';
 
-  var app = angular.module('YoutubeServices');
+  var app = angular.module('Youtube.Services');
   app.service('YoutubeService', YoutubeService);
 
   YoutubeService.$inject = ['$http'];
 
-  function YoutubeService() {
+  function YoutubeService($http) {
     // API config
   	var API = {
   		url: 'https://www.googleapis.com/youtube/v3',

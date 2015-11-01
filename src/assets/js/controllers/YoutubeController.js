@@ -49,54 +49,54 @@
       $scope.modal = false;
       $scope.currentVideo = undefined;
     };
-  }
 
-  function parseData(data) {
-    if (data.length > 0) {
-      $scope.videos = [];
+    function parseData(data) {
+      if (data.length > 0) {
+        $scope.videos = [];
 
-      data.forEach(function(item) {
-        var video = {
-          id: item.id.videoId,
-          channelId: item.snippet.channelId,
-          title: item.snippet.title,
-          images: {
-            default: {
-              url: item.snippet.thumbnails.default.url
-            },
-            medium: {
-              url: item.snippet.thumbnails.medium.url
-            },
-            high: {
-              url: item.snippet.thumbnails.high.url
+        data.forEach(function(item) {
+          var video = {
+            id: item.id.videoId,
+            channelId: item.snippet.channelId,
+            title: item.snippet.title,
+            images: {
+              default: {
+                url: item.snippet.thumbnails.default.url
+              },
+              medium: {
+                url: item.snippet.thumbnails.medium.url
+              },
+              high: {
+                url: item.snippet.thumbnails.high.url
+              }
             }
-          }
-        };
+          };
 
-        $scope.videos.push(video);
-      });
-    }
-  }
-
-  // Get all url params
-  function queryString(url) {
-    var parse_url = /^(?:([a-zA-Z]+):)?(\/{0,3})([0-9.\-a-zA-Z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/,
-        names = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'],
-        query_string = {},
-        result = parse_url.exec(url);
-
-    var vars = result[6].split('&');
-
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
-        query_string[pair[0]] = pair[1];
+          $scope.videos.push(video);
+        });
+      }
     }
 
-    return query_string;
-  }
+    // Get all url params
+    function queryString(url) {
+      var parse_url = /^(?:([a-zA-Z]+):)?(\/{0,3})([0-9.\-a-zA-Z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/,
+          names = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'],
+          query_string = {},
+          result = parse_url.exec(url);
 
-  function getVideoId(url) {
-    var query_string = queryString(url);
-    return query_string.v;
+      var vars = result[6].split('&');
+
+      for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split('=');
+          query_string[pair[0]] = pair[1];
+      }
+
+      return query_string;
+    }
+
+    function getVideoId(url) {
+      var query_string = queryString(url);
+      return query_string.v;
+    }
   }
 }());
