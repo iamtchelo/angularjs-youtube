@@ -6,8 +6,7 @@
 
 # How to start?
 
-> npm install -g gulp
-> npm install -g bower
+> npm install -g gulp && npm install -g bower
 
 # Install dependencies
 
@@ -15,7 +14,9 @@
 
 See the result on the browser, do enter in /public directory and run a simple server in *Python*
 
-> python -m SimpleHTTPServer
+```sh
+$ python -m SimpleHTTPServer
+```
 
 At moment the app show only videos by a *query*. You can choose a default query in ```src/assets/js/controllers/YoutubeController.js```
 
