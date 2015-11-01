@@ -1,20 +1,44 @@
-**A youtube app using angularjs!**
-===================
-Recently i've resolved to focus in **JavaScript** and other things, this month i've started to study angularjs. I always liked working with [YoutubeAPI](https://developers.google.com/youtube/) with Web Services on **PHP** and now with **JavaScript**.
+![Travis Status](https://travis-ci.org/marcelodeveloper/angularjs-youtube.svg?branch=master)
 
-This app show videos by **keywords**, all right?
+# A youtube app using angularjs
 
-Let's try:
+> This app was created with *angularjs* using [Youtube API V3](https://developers.google.com/youtube/v3/?hl=en).
 
-You can choose a default keyword in ```controllers.js```
+# How to start?
+
+> npm install -g gulp
+> npm install -g bower
+
+# Install dependencies
+
+> npm install && bower install
+
+See the result on the browser, do enter in /public directory and run a simple server in *Python*
+
+> python -m SimpleHTTPServer
+
+At moment the app show only videos by a *query*. You can choose a default query in ```src/assets/js/controllers/YoutubeController.js```
 
 ```js
-// default keyword
-$scope.query = 'keyword';
+// default query
+$scope.query = 'Red Hot Chilli Peppers';
 ```
 
-**Contribute**
-===================
+If you want only use the YoutubeService to get the videos in your apps. YoutubeService can do this. You can config the basic params as maxResults and your app key in. ```src/assets/js/services/YoutubeService.js```
+
+```js
+var API = {
+  url: 'https://www.googleapis.com/youtube/v3', // google api v3
+  params: {
+    key: 'yourkey', // your secret key
+    maxResults: 20, // max results per page
+    part: 'snippet', // groups of properties as player, status, topicDetails
+    type: 'video' // video, channel, playlist
+  }
+};
+```
+
+# Contribute
 
 If you have something to say, add or remove. You're welcome.
 
