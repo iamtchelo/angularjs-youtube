@@ -2,15 +2,15 @@
 ===================
 Recently i've resolved to focus in **JavaScript** and other things, this month i've started to study angularjs. I always liked working with [YoutubeAPI](https://developers.google.com/youtube/) with Web Services on **PHP** and now with **JavaScript**.
 
-This app show videos by **user** or **keywords**, all right?
+This app show videos by **keywords**, all right?
 
 Let's try:
 
-You can choose a default channel in ```controllers.js```
+You can choose a default keyword in ```controllers.js```
 
 ```js
-// default channel
-$scope.query = 'yourchannel';
+// default keyword
+$scope.query = 'keyword';
 ```
 
 **Contribute**

@@ -1,0 +1,4 @@
+#modal(ng-click="closeModal()", ng-class="{'modal-active': modal}")
+  .modal-content
+    iframe(width="560", height="315", ng-if="modal", ng-src="{{ currentVideo }}", frameborder="0", allowfullscreen)
+    a.close-modal(ng-click="closeModal()") &#215;

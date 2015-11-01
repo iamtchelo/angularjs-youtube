@@ -1,0 +1,23 @@
+doctype html
+html(lang="pt-BR", ng-app="App", ng-controller="YoutubeController")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    title {{ query }} - AngularJS Youtube
+    link(rel="stylesheet", href="/assets/css/app.css")
+  body
+    header#header
+      .center
+        h1.logo
+          img(src="http://www.gstatic.com/youtube/img/logo.png", width="72", height="30", alt="Youtube")
+        h3.subtitle.
+          A simple app to show your videos
+        form(role="form", ng-submit="search()")
+          .input-group
+            input.input-search(type="text", placeholder="Search by a keyword", ng-model="query")
+            .input-group-addon: span.glyphicon.glyphicon-search
+    #app
+      block content
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")
+    script(src="assets/js/app.js")

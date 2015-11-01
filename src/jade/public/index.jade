@@ -1,0 +1,11 @@
+extends ../templates/default.jade
+
+block content
+  include ../partials/modal.jade
+  .row
+    .videos(ng-repeat="video in videos")
+      a(href="#", ng-click="videoModal(video.id)")
+        span.title {{ video.title }}
+        .video-container
+          img.videos-img(src="{{ video.images.medium.url }}", title="{{ video.title }}", alt="{{ video.title }}")
+          span.glyphicon.glyphicon-play.play
