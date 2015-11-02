@@ -16,6 +16,8 @@ $ npm install -g gulp && npm install -g bower
 $ npm install && bower install
 ```
 
+Now run ```$ gulp``` to compile css, html and js files
+
 See the result on the browser, do enter in /public directory and run a simple server in *Python*
 
 ```sh
