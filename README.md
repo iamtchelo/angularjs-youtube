@@ -28,7 +28,7 @@ At moment the app show only videos by a *query*. You can choose a default query 
 
 ```js
 // default query
-$scope.query = 'Red Hot Chilli Peppers';
+$scope.query = 'Red Hot Chili Peppers';
 ```
 
 If you want only use the YoutubeService to get the videos in your apps. YoutubeService can do this. You can config the basic params as maxResults and your app key in. ```src/assets/js/services/YoutubeService.js```
